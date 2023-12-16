@@ -68,8 +68,8 @@ export default function Home() {
           justifyContent: "space-around",
         }}
       >
-        {items.map((item) => (
-          <Item {...item} />
+        {items.map((item, index) => (
+          <Item key={index} {...item} />
         ))}
       </div>
     </div>
