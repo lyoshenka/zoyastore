@@ -35,7 +35,7 @@ const items: Jewelery[] = [
   { img: img8, name: "ring", price: 2 },
   { img: img9, name: "golden velvet", price: 5 },
   { img: img10, name: "loopty chain", price: 6 },
-  { img: img11, name: "llama sparkles", price: 15 },
+  { img: img11, name: "llama sparkles", price: 15, sold: true },
   { img: img12, name: "taco face", price: 8 },
   { img: img13, name: "golden sparkle", price: 5 },
   { img: img14, name: "pom pom keychain", price: 4 },
@@ -85,7 +85,7 @@ export default function Home() {
 
 const Item = (item: Jewelery) => {
   return (
-    <div style={{ marginBottom: "60px" }}>
+    <div style={{ marginBottom: "60px", opacity: item.sold ? "50%" : "unset" }}>
       <h1>
         {item.sold ? (
           <>
