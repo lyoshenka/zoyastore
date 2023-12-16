@@ -17,13 +17,20 @@ import img13 from "./img/IMG_6705.jpeg";
 import img14 from "./img/IMG_6706.jpeg";
 import img15 from "./img/IMG_6707.jpeg";
 
-const items = [
+type Jewelery = {
+  img: typeof img1;
+  name: string;
+  price: number;
+  sold?: boolean;
+};
+
+const items: Jewelery[] = [
   { img: img1, name: "purple keychain", price: 4 },
   { img: img2, name: "hoopy hoopy chain", price: 10 },
   { img: img3, name: "a bracelet", price: 3 },
   { img: img4, name: "brush chain", price: 12 },
   { img: img5, name: "cactusy beads", price: 15 },
-  { img: img6, name: "earrings", price: 20 },
+  { img: img6, name: "earrings", price: 20, sold: true },
   { img: img7, name: "loop-de-loop", price: 1 },
   { img: img8, name: "ring", price: 2 },
   { img: img9, name: "golden velvet", price: 5 },
@@ -53,8 +60,8 @@ export default function Home() {
         </p>
         <p>
           <em>
-            Dad's note: to buy,{" "}
-            <Link href="https://grin.contact">message me</Link> with the item
+            Note from dad: to buy,{" "}
+            <Link href="https://grin.contact">message me</Link> with the item(s)
             you want and your mailing address. First come, first serve.
           </em>
         </p>
@@ -76,11 +83,22 @@ export default function Home() {
   );
 }
 
-const Item = (item: { img: typeof img1; name: string; price: number }) => {
+const Item = (item: Jewelery) => {
   return (
     <div style={{ marginBottom: "60px" }}>
       <h1>
-        {item.name} - ${item.price}
+        {item.sold ? (
+          <>
+            <span style={{ textDecoration: "line-through", fontWeight: "400" }}>
+              {item.name} - ${item.price}
+            </span>{" "}
+            sold
+          </>
+        ) : (
+          <>
+            {item.name} - ${item.price}
+          </>
+        )}
       </h1>
       <div style={{ maxWidth: "500px" }}>
         <Image
