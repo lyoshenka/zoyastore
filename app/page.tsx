@@ -49,10 +49,9 @@ export default function Home() {
         Hi, my name is Zoya and this is my store
       </h1>
       <div style={{ fontSize: "18px", lineHeight: "1.5" }}>
-        <p>I have a store that's going to be open from 12pm to 3pm.</p>
         <p>
-          My store will sell jewelery of all kinds: braided, beaded, and all
-          sorts.
+          I have a store that sells jewelery of all kinds: braided, beaded, and
+          all sorts.
         </p>
         <p>
           If you're interested, you can come to my store and look at what I
