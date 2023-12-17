@@ -30,7 +30,7 @@ const items: Jewelery[] = [
   { img: img3, name: "a bracelet", price: 3 },
   { img: img4, name: "brush chain", price: 12 },
   { img: img5, name: "cactusy beads", price: 15 },
-  { img: img6, name: "earrings", price: 20, sold: true },
+  { img: img6, name: "earrings", price: 20, sold: false },
   { img: img7, name: "loop-de-loop", price: 1 },
   { img: img8, name: "ring", price: 2, sold: true },
   { img: img9, name: "golden velvet", price: 5 },
