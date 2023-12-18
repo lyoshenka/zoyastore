@@ -25,7 +25,7 @@ type Jewelery = {
 };
 
 const items: Jewelery[] = [
-  { img: img1, name: "purple keychain", price: 4 },
+  { img: img1, name: "purple keychain", price: 4, sold: true },
   { img: img2, name: "hoopy hoopy chain", price: 10 },
   { img: img3, name: "a bracelet", price: 3 },
   { img: img4, name: "brush chain", price: 12 },
