@@ -2,20 +2,23 @@ import Link from "next/link";
 import Image from "next/image";
 
 import img1 from "./img/IMG_6693.jpeg";
-import img2 from "./img/IMG_6694.jpeg";
-import img3 from "./img/IMG_6695.jpeg";
-import img4 from "./img/IMG_6696.jpeg";
-import img5 from "./img/IMG_6697.jpeg";
-import img6 from "./img/IMG_6698.jpeg";
-import img7 from "./img/IMG_6699.jpeg";
-import img8 from "./img/IMG_6700.jpeg";
-import img9 from "./img/IMG_6701.jpeg";
-import img10 from "./img/IMG_6702.jpeg";
-import img11 from "./img/IMG_6703.jpeg";
-import img12 from "./img/IMG_6704.jpeg";
-import img13 from "./img/IMG_6705.jpeg";
-import img14 from "./img/IMG_6706.jpeg";
-import img15 from "./img/IMG_6707.jpeg";
+import img2 from "./img/IMG_6700.jpeg";
+import img3 from "./img/IMG_6702.jpeg";
+import img4 from "./img/IMG_6703.jpeg";
+import img5 from "./img/IMG_6704.jpeg";
+import img6 from "./img/IMG_8862.jpg";
+import img7 from "./img/IMG_8863.jpg";
+import img8 from "./img/IMG_8864.jpg";
+import img9 from "./img/IMG_8865.jpg";
+import img10 from "./img/IMG_8866.jpg";
+import img11 from "./img/IMG_8867.jpg";
+import img13 from "./img/IMG_8869.jpg";
+import img14 from "./img/IMG_8870.jpg";
+import img15 from "./img/IMG_8871.jpg";
+import img16 from "./img/IMG_8872.jpg";
+import img17 from "./img/IMG_8873.jpg";
+import img18 from "./img/IMG_8874.jpg";
+import img19 from "./img/IMG_8875.jpg";
 
 type Jewelery = {
   img: typeof img1;
@@ -25,21 +28,24 @@ type Jewelery = {
 };
 
 const items: Jewelery[] = [
+  { img: img5, name: "taco face", price: 8, sold: true },
+  { img: img6, name: "red beaded bracelet", price: 7 },
   { img: img1, name: "purple keychain", price: 4, sold: true },
-  { img: img2, name: "hoopy hoopy chain", price: 10 },
-  { img: img3, name: "a bracelet", price: 3 },
-  { img: img4, name: "brush chain", price: 12 },
-  { img: img5, name: "cactusy beads", price: 15 },
-  { img: img6, name: "earrings", price: 20, sold: false },
-  { img: img7, name: "loop-de-loop", price: 1 },
-  { img: img8, name: "ring", price: 2, sold: true },
-  { img: img9, name: "golden velvet", price: 5 },
-  { img: img10, name: "loopty chain", price: 6, sold: true },
-  { img: img11, name: "llama sparkles", price: 15, sold: true },
-  { img: img12, name: "taco face", price: 8, sold: true },
-  { img: img13, name: "golden sparkle", price: 5 },
-  { img: img14, name: "pom pom keychain", price: 4 },
-  { img: img15, name: "pattern bead brush", price: 10 },
+  { img: img7, name: "stone bead earrings", price: 3 },
+  { img: img8, name: "rainbow earrings", price: 3 },
+  { img: img9, name: "double amazing earrings", price: 3 },
+  { img: img10, name: "long purple perfection", price: 3 },
+  { img: img11, name: "short purple perfection", price: 3 },
+  { img: img2, name: "ring", price: 2, sold: true },
+  { img: img13, name: "color field / color splatter", price: 14 },
+  { img: img3, name: "loopty chain", price: 6, sold: true },
+  { img: img14, name: "easter potholder", price: 10 },
+  { img: img15, name: "thanksgiving potholder", price: 10 },
+  { img: img16, name: "color chain potholder", price: 10 },
+  { img: img17, name: "color mix potholder", price: 10 },
+  { img: img18, name: "rainbow potholder", price: 10 },
+  { img: img19, name: "color combination potholder", price: 10 },
+  { img: img4, name: "llama sparkles", price: 15, sold: true },
 ];
 
 export default function Home() {
@@ -100,18 +106,20 @@ const Item = (item: Jewelery) => {
         )}
       </h1>
       <div style={{ maxWidth: "500px" }}>
-        <Image
-          src={item.img}
-          alt={item.name}
-          width={0}
-          height={0}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            objectPosition: "center",
-          }}
-        />
+        <a href={item.img.src} target="_blank" rel="noreferrer">
+          <Image
+            src={item.img}
+            alt={item.name}
+            width={0}
+            height={0}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
+          />
+        </a>
       </div>
     </div>
   );
