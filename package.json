@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "next build && touch out/.nojekyll && cp CNAME out/ && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && touch out/.nojekyll && cp CNAME out/ && git add out/ && git commit -m \"Deploy\" && git push --force origin `git subtree split --prefix=out main`:gh-pages && git reset --hard HEAD~1 && touch out/.gitignore"
   },
   "dependencies": {
     "@types/node": "^18.11.5",
